@@ -35,7 +35,7 @@ $row = mysqli_fetch_assoc($newquery)
         <form action="edit.php" method="post" enctype="multipart/form-data">
           <input class="form-control"  type="text" name="id" value="<?= $id?>" >
           <label class="form-control-label">text</label>
-          <input type="text" name="text" value=" <?= $row['text'] ?>">
+            <textarea class="form-control" cols="30" rows="10" name="text"><?= $row['text'] ?></textarea>
             <label class="form-control-label">img</label>
           <input class="form-control"  type="file" name="img">
 

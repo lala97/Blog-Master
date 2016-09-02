@@ -53,7 +53,7 @@
 		</div>
 	</div>
 </section>
-<?php 
+<?php
 session_start();
 // if (isset($_SESSION['msj'])) {
 //    echo $_SESSION['msj'];

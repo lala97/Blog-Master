@@ -21,7 +21,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div class="login_button">
 			    <ul>
-			    <li><a href="#">Sign in</a><li> | 
+			    <li><a href="#">Sign in</a><li> |
 			    <li><a href="#">Login</a></li>
 			    </ul>
 			</div>
@@ -56,7 +56,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="main">
 		<div class="content">
 
-			<?php 
+			<?php
 				include 'd/config.php';
 		$newquer = $connect -> select("crudoop2");
 		$target = "images/";
@@ -66,32 +66,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			<!--     <h2><a href="single.html">Making it look like readable English. Many desktop publishing packages and web page</a></h2>
 			    <span>By Kieth Deviec- 2 hours ago</span> -->
-			    <?php 
+			    <?php
 					$arr=[];
 					$arr[] = explode('.', $row['text']);
 				?>
 					<h2><a href="single.php?id=<?=$row['id'] ?>" ><?php foreach ($arr as $key => $value) {
-						echo  substr($value[0], 0,50);		
-					} 
+						echo  substr($value[0], 0,50);
+					}
 						?> </a></h2>
 				<div class="box1_img">
-				   
+
 				    <img src="<?= $target .  $row['src']?>">
-				</div>   
+				</div>
 				<div class="data">
-				  
-				  
+
+
 				    <p><?= substr($row['text'],0,400) ?></p>
 
 				    <a href="single.php?id=<?=$row['id'] ?>">Continue reading >>></a>
 				</div>
 			<div class="clear"></div>
 			</div>
-			
-			<?php 
+
+			<?php
 		}
 			?>
-		
+
 		<div class="page_links">
 			<div class="next_button">
 				 <a href="#">Next</a>
@@ -118,21 +118,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		    <h2>Recent Feeds</h2>
 			<div class="list1">
 				 <ul>
-					<?php 
+					<?php
 		    $newquer3 = $connect -> select2("crudoop2", "date");
 		    while ($row3 = mysqli_fetch_assoc($newquer3)) {
-		    	
-		    
+
+
 		    ?>
-			  <li><a href="#"> 
-			  <?php 
+			  <li><a href="#">
+			  <?php
 				echo substr( $row3['text'],0,43);
 			   ?>
 			  </a></li>
 			  <?php
 			}
 		     ?>
-					
+
 				</ul>
 			</div>
 		</div>
@@ -140,21 +140,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <h2>Most Viewed</h2>
 		<div class="list2">
 		    <ul>
-		    <?php 
+		    <?php
 		    $newquer2 = $connect -> select2("crudoop2", "view");
 		    while ($row2 = mysqli_fetch_assoc($newquer2)) {
-		    	
-		    
+
+
 		    ?>
-			  <li><a href="#"> 
-			  <?php 
+			  <li><a href="#">
+			  <?php
 				echo substr( $row2['text'],0,43);
 			   ?>
 			  </a></li>
 			  <?php
 			}
 		     ?>
-			 
+
 			</ul>
 		</div>
 	</div>
